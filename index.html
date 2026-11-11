@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#14100b" />
+    <link rel="icon" href="assets/marka/logo-C-ikon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Alegreya+Sans:wght@400;600;800&display=swap" rel="stylesheet" />
+    <title>Hükümdar · Gerçek Zamanlı</title>
+    <script type="module" crossorigin src="/hukumdar-rts/assets/index-WBJEHWBt.js"></script>
+    <link rel="stylesheet" crossorigin href="/hukumdar-rts/assets/index-Dufqwf7v.css">
+  </head>
+  <body>
+    <main id="app">
+      <canvas id="game-canvas" aria-label="Ötüken Yaylası savaş alanı"></canvas>
+
+      <section id="loading"><img src="assets/marka/logo-B-amblem.png" alt="Hükümdar" /><div class="load-track"><i id="load-bar"></i></div></section>
+
+      <section id="setup">
+        <div class="setup-card">
+          <img class="logo" src="assets/marka/logo-A-yazi.png" alt="HÜKÜMDAR" />
+          <p class="sub">Ötüken Yaylası’nda obanı büyüt: sürünü güt, demiri döv, ordunu yetiştir. Yabanda maceralara atıl, efsanevi Börü ile güven bağı kur. Süre dolmadan en çok <b>Kut</b>’u topla ya da rakip otağı düşür.</p>
+          <h3>Maç süresi</h3>
+          <div class="sure"><button data-sure="15">15 dk</button><button data-sure="30" class="on">30 dk</button><button data-sure="45">45 dk</button><button data-sure="60">60 dk</button></div>
+          <ul class="howto">
+            <li><kbd>Sol tık / sürükle</kbd> seç · <kbd>Ctrl+tık</kbd> aynı türü seç</li>
+            <li><kbd>Sağ tık</kbd> yürü, saldır, topla (ağaç, maden, koyun), inşa et</li>
+            <li><kbd>WASD</kbd> kaydır · <kbd>Q/E</kbd> döndür · <kbd>Tekerlek</kbd> yakınlaş · <kbd>Orta tuş</kbd> sürükle</li>
+            <li><kbd>A</kbd> saldırarak ilerle · <kbd>H</kbd> otağa dön · <kbd>.</kbd> boştaki çoban</li>
+          </ul>
+          <button id="btn-basla" class="gold big">Göçe Başla</button>
+        </div>
+      </section>
+
+      <section id="hud">
+        <div id="top">
+          <div id="res"></div>
+          <div id="center"><div id="kut"></div><div id="clock">30:00</div><div id="kutstone"></div></div>
+        </div>
+        <canvas id="mini" width="200" height="200"></canvas>
+        <div id="panel"></div>
+      </section>
+
+      <div id="selbox"></div>
+      <div id="tip"></div>
+      <div id="toast"></div>
+      <div id="adv" class="modal"></div>
+      <div id="end" class="modal"><div class="adv-card"><small>Maç bitti</small><h2 id="end-title"></h2><p id="end-text"></p><div class="adv-ch"><button id="btn-yeni"><b>Yeni maç</b></button></div></div></div>
+      <div id="credits">Börü modeli: “Fox” — PixelMannen (CC0) & tomkranis (CC-BY 4.0), Khronos glTF örnekleri · Karakter/ağaç: KayKit (CC0)</div>
+    </main>
+  </body>
+</html>
