@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="tr">
   <head>
     <meta charset="UTF-8" />
@@ -7,10 +7,10 @@
     <link rel="icon" href="assets/marka/logo-C-ikon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Alegreya+Sans:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Alegreya+Sans:wght@400;600;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
     <title>Hükümdar · Gerçek Zamanlı</title>
-    <script type="module" crossorigin src="/Program Files/Git/hukumdar-rts/assets/index-D03w4xKD.js"></script>
-    <link rel="stylesheet" crossorigin href="/Program Files/Git/hukumdar-rts/assets/index-CC7shc8L.css">
+    <script type="module" crossorigin src="/hukumdar-rts/assets/index-BrxaFsN1.js"></script>
+    <link rel="stylesheet" crossorigin href="/hukumdar-rts/assets/index-GhBEFfCL.css">
   </head>
   <body>
     <main id="app">
@@ -23,12 +23,13 @@
           <img class="logo" src="assets/marka/logo-A-yazi.png" alt="HÜKÜMDAR" />
           <p class="sub">Ötüken Yaylası’nda obanı büyüt: sürünü güt, demiri döv, ordunu yetiştir. Yabanda maceralara atıl, efsanevi Börü ile güven bağı kur. Her boyun yalnızca kendisinin bildiği bir <b>gizli hedefi</b> var: ilk tamamlayan kazanır. Kimse tamamlayamazsa süre sonunda en çok <b>Kut</b>’u toplayan, ya da rakip otağı düşüren kazanır.</p>
           <h3>Maç süresi</h3>
-          <div class="sure"><button data-sure="15">15 dk</button><button data-sure="30" class="on">30 dk</button><button data-sure="45">45 dk</button><button data-sure="60">60 dk</button></div>
+          <div class="sure"><button data-sure="10">10 dk</button><button data-sure="15" class="on">15 dk</button><button data-sure="20">20 dk</button><button data-sure="30">30 dk</button></div>
           <ul class="howto">
-            <li><kbd>Sol tık / sürükle</kbd> seç · <kbd>Ctrl+tık</kbd> aynı türü seç</li>
-            <li><kbd>Sağ tık</kbd> yürü, saldır, topla (ağaç, maden, koyun), inşa et</li>
-            <li><kbd>WASD</kbd> kaydır · <kbd>Q/E</kbd> döndür · <kbd>Tekerlek</kbd> yakınlaş · <kbd>Orta tuş</kbd> sürükle</li>
-            <li><kbd>A</kbd> saldırarak ilerle · <kbd>H</kbd> otağa dön · <kbd>.</kbd> boştaki çoban</li>
+            <li><b>Tıkla</b> ya da <b>kutu çiz</b>: birlik seç · <b>Çift tık</b>: aynı türden hepsi</li>
+            <li><b>Sağ tık</b>: yürü, saldır, topla (ağaç, maden, koyun), inşa et</li>
+            <li>Kamera: fareyi <b>ekran kenarına</b> götür, <b>mini haritaya</b> tıkla, <b>tekerlek</b> ile yaklaş</li>
+            <li>Taktikler ve yapılar: alttaki panelde <b>düğmeler</b> (Saldırarak İlerle, Turan Taktiği…)</li>
+            <li><b>Telefonda:</b> dokun = seç, seçiliyken başka yere dokun = komut · tek parmak kaydır · iki parmak yakınlaş/döndür</li>
           </ul>
           <button id="btn-basla" class="gold big">Göçe Başla</button>
         </div>
@@ -40,6 +41,14 @@
           <div id="center"><button id="btn-hedef">Gizli Hedefim <i id="hedef-bar"></i></button><div id="kut"></div><div id="clock">30:00</div><div id="kutstone"></div></div>
         </div>
         <canvas id="mini" width="200" height="200"></canvas>
+        <div id="quick">
+          <button data-cmd="q-coban" title="Boşta duran çobanı bul">👤 Boştaki Çoban</button>
+          <button data-cmd="q-ordu" title="Bütün savaşçıları seç">⚔ Tüm Ordu</button>
+          <button data-cmd="q-otag" title="Kamerayı otağa götür">⛺ Otağ</button>
+          <span class="sep"></span>
+          <button data-cmd="q-sol" title="Kamerayı döndür">⟲</button><button data-cmd="q-sag" title="Kamerayı döndür">⟳</button>
+          <button data-cmd="q-yakin" title="Yaklaş">＋</button><button data-cmd="q-uzak" title="Uzaklaş">－</button>
+        </div>
         <div id="panel"></div>
       </section>
 
