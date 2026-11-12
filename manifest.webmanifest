@@ -1,0 +1,19 @@
+{
+  "name": "Hükümdar — Ötüken Yaylası",
+  "short_name": "Hükümdar",
+  "description": "Türk mitolojisi temalı gerçek zamanlı strateji oyunu",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "display_override": ["fullscreen", "standalone"],
+  "orientation": "landscape",
+  "background_color": "#14100b",
+  "theme_color": "#14100b",
+  "lang": "tr",
+  "icons": [
+    { "src": "pwa/ikon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "pwa/ikon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "pwa/ikon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
