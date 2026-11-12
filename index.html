@@ -14,8 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Alegreya+Sans:wght@400;600;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
     <title>Hükümdar · Gerçek Zamanlı</title>
-    <script type="module" crossorigin src="/hukumdar-rts/assets/index-DTod6HuK.js"></script>
-    <link rel="stylesheet" crossorigin href="/hukumdar-rts/assets/index-GhBEFfCL.css">
+    <script type="module" crossorigin src="/hukumdar-rts/assets/index-BaLWehTc.js"></script>
+    <link rel="stylesheet" crossorigin href="/hukumdar-rts/assets/index-CUyAVvs5.css">
   </head>
   <body>
     <main id="app">
@@ -26,15 +26,16 @@
       <section id="setup">
         <div class="setup-card">
           <img class="logo" src="assets/marka/logo-A-yazi.png" alt="HÜKÜMDAR" />
-          <p class="sub">Ötüken Yaylası’nda obanı büyüt: sürünü güt, demiri döv, ordunu yetiştir. Yabanda maceralara atıl, efsanevi Börü ile güven bağı kur. Her boyun yalnızca kendisinin bildiği bir <b>gizli hedefi</b> var: ilk tamamlayan kazanır. Kimse tamamlayamazsa süre sonunda en çok <b>Kut</b>’u toplayan, ya da rakip otağı düşüren kazanır.</p>
+          <p class="sub">Ötüken Yaylası’nda obanı büyüt: sürünü güt, demiri döv, ordunu yetiştir. Yabanda maceralara atıl, efsanevi Börü ile güven bağı kur. Yayla 3 diyara ve 9 yurda bölünmüş; yurdun <b>balbal taşını</b> tutan o yurdun hâkimi olur. Her boyun yalnızca kendisinin bildiği bir <b>gizli hedefi</b> var (bir diyarı fethet, iki yurdu al…): ilk tamamlayan kazanır. Kimse tamamlayamazsa süre sonunda en çok <b>Kut</b>’u toplayan, ya da rakip otağı düşüren kazanır.</p>
           <h3>Maç süresi</h3>
           <div class="sure"><button data-sure="10">10 dk</button><button data-sure="15" class="on">15 dk</button><button data-sure="20">20 dk</button><button data-sure="30">30 dk</button></div>
           <ul class="howto">
-            <li><b>Tıkla</b> ya da <b>kutu çiz</b>: birlik seç · <b>Çift tık</b>: aynı türden hepsi</li>
-            <li><b>Sağ tık</b>: yürü, saldır, topla (ağaç, maden, koyun), inşa et</li>
-            <li>Kamera: fareyi <b>ekran kenarına</b> götür, <b>mini haritaya</b> tıkla, <b>tekerlek</b> ile yaklaş</li>
+            <li class="mouse-only"><b>Tıkla</b> ya da <b>kutu çiz</b>: birlik seç · <b>Çift tık</b>: aynı türden hepsi</li>
+            <li class="mouse-only"><b>Sağ tık</b>: yürü, saldır, topla (ağaç, maden, koyun), inşa et</li>
+            <li class="mouse-only">Kamera: fareyi <b>ekran kenarına</b> götür, <b>mini haritaya</b> tıkla, <b>tekerlek</b> ile yaklaş</li>
             <li>Taktikler ve yapılar: alttaki panelde <b>düğmeler</b> (Saldırarak İlerle, Turan Taktiği…)</li>
-            <li><b>Telefonda:</b> dokun = seç, seçiliyken başka yere dokun = komut · tek parmak kaydır · iki parmak yakınlaş/döndür</li>
+            <li class="touch-only"><b>Dokun</b>: seç · seçiliyken yere ya da hedefe dokun: komut · tek parmak kaydır · iki parmak yakınlaş/döndür</li>
+            <li style="display:none"><b>Telefonda:</b> dokun = seç, seçiliyken başka yere dokun = komut · tek parmak kaydır · iki parmak yakınlaş/döndür</li>
           </ul>
           <button id="btn-basla" class="gold big">Göçe Başla</button>
         </div>
@@ -43,7 +44,7 @@
       <section id="hud">
         <div id="top">
           <div id="res"></div>
-          <div id="center"><button id="btn-hedef">Gizli Hedefim <i id="hedef-bar"></i></button><div id="kut"></div><div id="clock">30:00</div><div id="kutstone"></div></div>
+          <div id="center"><button id="btn-hedef">Gizli Hedefim <i id="hedef-bar"></i></button><div id="kut"></div><div id="yurtsay"></div><div id="clock">30:00</div><div id="kutstone"></div></div>
         </div>
         <canvas id="mini" width="200" height="200"></canvas>
         <div id="quick">
